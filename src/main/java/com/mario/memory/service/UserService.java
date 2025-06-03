@@ -93,4 +93,8 @@ public class UserService {
     public List<User> getLeaderboard() {
         return userRepository.findAll();
     }
+
+    public List<User> findAllUsers() {
+    return userRepository.findAll();
+}
 }
