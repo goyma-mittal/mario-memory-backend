@@ -8,6 +8,6 @@ RUN mvn clean package -DskipTests
 # Step 2: Use a smaller image to run the JAR
 FROM eclipse-temurin:21-jdk-alpine
 WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/target/mario-memory.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
